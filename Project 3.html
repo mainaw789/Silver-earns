@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Earn - Earn Money Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .gift-box:hover {
+            transform: translateY(-5px) rotate(-5deg);
+        }
+        .gift-box {
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-coins text-yellow-400 text-2xl"></i>
+                <span class="font-bold text-xl">Silver Earn</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-yellow-300 transition">Home</a>
+                <a href="#earn" class="hover:text-yellow-300 transition">Earn</a>
+                <a href="#products" class="hover:text-yellow-300 transition">Products</a>
+                <a href="#testimonials" class="hover:text-yellow-300 transition">Testimonials</a>
+                <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="loginBtn" class="bg-white text-purple-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition">Login</button>
+                <button id="registerBtn" class="bg-yellow-400 text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-yellow-300 transition">Register</button>
+                <button class="md:hidden text-white" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-purple-700 px-4 py-2">
+            <a href="#home" class="block py-2 hover:text-yellow-300 transition">Home</a>
+            <a href="#earn" class="block py-2 hover:text-yellow-300 transition">Earn</a>
+            <a href="#products" class="block py-2 hover:text-yellow-300 transition">Products</a>
+            <a href="#testimonials" class="block py-2 hover:text-yellow-300 transition">Testimonials</a>
+            <a href="#contact" class="block py-2 hover:text-yellow-300 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-br from-blue-50 to-purple-50 py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Earn Money <span class="text-purple-600">Every Day</span> With Silver Earn</h1>
+                <p class="text-lg text-gray-600 mb-6">Join thousands of Kenyans making money through product marketing, referrals, surveys, and more. Start earning today!</p>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition animate-pulse-slow">Start Earning Now</button>
+                    <button class="bg-white border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-medium hover:bg-purple-50 transition">How It Works</button>
+                </div>
+                <div class="mt-8 flex items-center space-x-4">
+                    <div class="flex -space-x-2">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="User">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="User">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="User">
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600">Join <span class="font-bold text-purple-600">10,000+</span> members earning daily</p>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span class="text-gray-700">4.8 (1,200 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Earning Money" class="rounded-xl shadow-xl w-full max-w-md animate-float">
+                    <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-xl shadow-lg">
+                        <div class="flex items-center">
+                            <div class="bg-green-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-wallet text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Daily Earnings</p>
+                                <p class="font-bold text-green-600">Ksh 1,200+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-purple-700 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-4">
+                    <div class="text-3xl font-bold counter" data-target="10245">0</div>
+                    <p class="text-sm opacity-80">Active Members</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl font-bold counter" data-target="4580000">0</div>
+                    <p class="text-sm opacity-80">Total Earned</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl font-bold counter" data-target="12500">0</div>
+                    <p class="text-sm opacity-80">Products Shared</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl font-bold counter" data-target="9800">0</div>
+                    <p class="text-sm opacity-80">Surveys Completed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">How <span class="text-purple-600">Silver Earn</span> Works</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-user-plus text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-3">1. Register & Pay Fee</h3>
+                    <p class="text-gray-600 text-center">Sign up and pay the one-time registration fee of Ksh 150 to unlock all earning features.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-tasks text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-3">2. Complete Tasks</h3>
+                    <p class="text-gray-600 text-center">Earn by marketing products, taking surveys, referring friends, and making sales.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-money-bill-wave text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-3">3. Withdraw Earnings</h3>
+                    <p class="text-gray-600 text-center">Withdraw your earnings directly to M-PESA when you reach Ksh 2,500 minimum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earnings Dashboard (Logged In View) -->
+    <section id="earn" class="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Your <span class="text-purple-600">Earnings Dashboard</span></h2>
+            
+            <!-- Total Earnings Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Total Earnings</h3>
+                        <span class="text-sm text-purple-600">Updated in real-time</span>
+                    </div>
+                    <div class="flex items-end space-x-2 mb-6">
+                        <span class="text-4xl font-bold text-gray-800 counter" data-target="3850">0</span>
+                        <span class="text-lg text-gray-600">KES</span>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <p class="text-xs text-purple-600 mb-1">Marketing</p>
+                            <p class="font-semibold counter" data-target="1250">0</p>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <p class="text-xs text-blue-600 mb-1">Sales</p>
+                            <p class="font-semibold counter" data-target="800">0</p>
+                        </div>
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <p class="text-xs text-green-600 mb-1">Referrals</p>
+                            <p class="font-semibold counter" data-target="1200">0</p>
+                        </div>
+                        <div class="bg-yellow-50 p-3 rounded-lg">
+                            <p class="text-xs text-yellow-600 mb-1">Surveys</p>
+                            <p class="font-semibold counter" data-target="400">0</p>
+                        </div>
+                        <div class="bg-pink-50 p-3 rounded-lg">
+                            <p class="text-xs text-pink-600 mb-1">Gifts</p>
+                            <p class="font-semibold counter" data-target="200">0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-6 py-3 flex justify-between items-center">
+                    <p class="text-sm text-gray-600">Next withdrawal available at Ksh 2,500</p>
+                    <button class="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-purple-700 transition disabled:opacity-50" disabled>Withdraw</button>
+                </div>
+            </div>
+
+            <!-- Earning Methods -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Referral System -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-users text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Referral System</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Earn Ksh 100 for each friend who signs up and Ksh 50 when they make their first deposit.</p>
+                        
+                        <div class="grid grid-cols-3 gap-4 mb-6">
+                            <div class="bg-gray-50 p-3 rounded-lg text-center">
+                                <p class="text-xs text-gray-500 mb-1">Total Referrals</p>
+                                <p class="font-bold text-green-600 counter" data-target="12">0</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg text-center">
+                                <p class="text-xs text-gray-500 mb-1">Active Deposits</p>
+                                <p class="font-bold text-blue-600 counter" data-target="8">0</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg text-center">
+                                <p class="text-xs text-gray-500 mb-1">Earned</p>
+                                <p class="font-bold text-purple-600 counter" data-target="1200">0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Your Referral Link</label>
+                            <div class="flex">
+                                <input type="text" id="referralLink" value="https://silverearn.co.ke/ref/user123" class="flex-grow border border-gray-300 rounded-l-lg px-3 py-2 text-sm" readonly>
+                                <button onclick="copyReferralLink()" class="bg-purple-600 text-white px-3 py-2 rounded-r-lg text-sm hover:bg-purple-700 transition">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-2 rounded-lg font-medium hover:bg-green-700 transition flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2"></i> Share on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Survey System -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-poll text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Daily Surveys</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Complete surveys to earn Ksh 20 each. You can do 10 surveys per day.</p>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>Today's Progress</span>
+                                <span>4/10 completed</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <h4 class="font-medium text-blue-800 mb-2">Current Survey Question</h4>
+                            <p class="text-gray-700 mb-3">"How would you invest Ksh 10,000 to generate passive income?"</p>
+                            <textarea class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm" rows="3" placeholder="Type your answer here..."></textarea>
+                        </div>
+                        
+                        <button class="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">
+                            Submit Answer & Earn Ksh 20
+                        </button>
+                        <p class="text-xs text-gray-500 mt-2 text-center">Next survey available in: <span class="font-medium">2 hours 15 min</span></p>
+                    </div>
+                </div>
+
+                <!-- Gift Bonus System -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-yellow-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-gift text-yellow-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Weekly Gift Bonus</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Claim your weekly random gift between Ksh 10-200. New gift available every Monday.</p>
+                        
+                        <div class="flex justify-center mb-6">
+                            <div class="gift-box bg-gradient-to-br from-yellow-400 to-yellow-500 w-32 h-32 rounded-lg shadow-lg flex items-center justify-center cursor-pointer transform hover:scale-110 transition">
+                                <i class="fas fa-gift text-white text-5xl"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <p class="text-sm text-gray-600 mb-2">Next gift available in:</p>
+                            <div class="flex justify-center space-x-2">
+                                <div class="bg-gray-100 px-3 py-1 rounded">
+                                    <span class="font-bold">3</span> <span class="text-xs">days</span>
+                                </div>
+                                <div class="bg-gray-100 px-3 py-1 rounded">
+                                    <span class="font-bold">14</span> <span class="text-xs">hours</span>
+                                </div>
+                                <div class="bg-gray-100 px-3 py-1 rounded">
+                                    <span class="font-bold">22</span> <span class="text-xs">min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daily Tasks -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-clipboard-list text-purple-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Daily Tasks</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Complete these tasks daily to maximize your earnings:</p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="task1" class="mr-3 h-5 w-5 text-purple-600 rounded border-gray-300">
+                                <label for="task1" class="text-gray-700">Share 1 product (Ksh 50)</label>
+                                <span class="ml-auto text-sm text-purple-600">+50</span>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="task2" class="mr-3 h-5 w-5 text-purple-600 rounded border-gray-300" checked>
+                                <label for="task2" class="text-gray-700 line-through">Complete 3 surveys (Ksh 60)</label>
+                                <span class="ml-auto text-sm text-green-600">✓</span>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="task3" class="mr-3 h-5 w-5 text-purple-600 rounded border-gray-300">
+                                <label for="task3" class="text-gray-700">Refer 1 friend (Ksh 100)</label>
+                                <span class="ml-auto text-sm text-purple-600">+100</span>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="task4" class="mr-3 h-5 w-5 text-purple-600 rounded border-gray-300">
+                                <label for="task4" class="text-gray-700">Make a sale (20% commission)</label>
+                                <span class="ml-auto text-sm text-purple-600">+20%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-fire text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-purple-800">Daily Streak: 3 days</p>
+                                    <p class="text-xs text-purple-600">Complete all tasks for 7 days to earn a bonus!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Market Products & <span class="text-purple-600">Earn Commissions</span></h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Earn Ksh 50 for each product you share and 20% commission on every sale made through your link.</p>
+            
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button class="px-4 py-2 text-sm font-medium rounded-l-lg bg-purple-600 text-white">All</button>
+                    <button class="px-4 py-2 text-sm font-medium bg-white border-t border-b border-gray-200 text-purple-600">Handbags</button>
+                    <button class="px-4 py-2 text-sm font-medium bg-white border-t border-b border-gray-200 text-purple-600">Shoes</button>
+                    <button class="px-4 py-2 text-sm font-medium rounded-r-lg bg-white border border-gray-200 text-purple-600">Accessories</button>
+                </div>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80" alt="Handbag" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-full">Ksh 50</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Luxury Leather Handbag</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">(24)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="font-bold text-gray-800">Ksh 2,300</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">20% commission</span>
+                        </div>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2"></i> Market & Earn
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80" alt="Nike Shoes" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-full">Ksh 50</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Nike Air Force 1 White</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">(42)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="font-bold text-gray-800">Ksh 4,500</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">20% commission</span>
+                        </div>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2"></i> Market & Earn
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Adidas Shoes" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-full">Ksh 50</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Adidas Samba Classic</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">(18)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="font-bold text-gray-800">Ksh 3,800</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">20% commission</span>
+                        </div>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2"></i> Market & Earn
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Ladies Shoes" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-full">Ksh 50</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Ladies Doll Shoes</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">(31)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="font-bold text-gray-800">Ksh 700</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">20% commission</span>
+                        </div>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2"></i> Market & Earn
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <button class="bg-white border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-medium hover:bg-purple-50 transition">
+                    View All Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">What Our <span class="text-purple-600">Members Say</span></h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Sarah K.</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"I've earned over Ksh 15,000 in just two months by sharing products and referring friends. The weekly gifts are a nice bonus!"</p>
+                    <div class="flex items-center text-xs text-gray-500">
+                        <i class="fas fa-map-marker-alt mr-1"></i> Nairobi, Kenya
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">James M.</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The surveys are quick and easy. I make at least Ksh 200 daily just by answering questions during my breaks."</p>
+                    <div class="flex items-center text-xs text-gray-500">
+                        <i class="fas fa-map-marker-alt mr-1"></i> Mombasa, Kenya
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Aisha" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Aisha N.</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"I was skeptical at first, but after my first withdrawal of Ksh 3,000, I'm convinced. The products are quality and easy to market."</p>
+                    <div class="flex items-center text-xs text-gray-500">
+                        <i class="fas fa-map-marker-alt mr-1"></i> Kisumu, Kenya
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 flex flex-wrap justify-center gap-4">
+                <div class="bg-white p-3 rounded-lg shadow-sm flex items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" alt="Amazon" class="h-6">
+                </div>
+                <div class="bg-white p-3 rounded-lg shadow-sm flex items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/505px-Apple_logo_black.svg.png" alt="Apple" class="h-6">
+                </div>
+                <div class="bg-white p-3 rounded-lg shadow-sm flex items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2008px-Google_%22G%22_Logo.svg.png" alt="Google" class="h-6">
+                </div>
+                <div class="bg-white p-3 rounded-lg shadow-sm flex items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft" class="h-6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment & Wallet Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Payments & <span class="text-purple-600">Wallet</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Deposit Card -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+                    <div class="bg-purple-600 p-4 text-white">
+                        <h3 class="font-semibold text-lg">Deposit Funds</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Amount (KES)</label>
+                            <input type="number" class="w-full border border-gray-300 rounded-lg px-3 py-2" placeholder="Enter amount">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">M-PESA Transaction Code</label>
+                            <input type="text" class="w-full border border-gray-300 rounded-lg px-3 py-2" placeholder="Enter transaction code">
+                        </div>
+                        <div class="bg-yellow-50 p-3 rounded-lg mb-6">
+                            <p class="text-sm text-yellow-800 font-medium">Send payment to: <span class="font-bold">+254115264461</span></p>
+                            <p class="text-xs text-yellow-700 mt-1">Registration fee: Ksh 150 (one-time payment)</p>
+                        </div>
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition">
+                            Confirm Deposit
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Withdrawal Card -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+                    <div class="bg-blue-600 p-4 text-white">
+                        <h3 class="font-semibold text-lg">Withdraw Earnings</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Amount (KES)</label>
+                            <input type="number" class="w-full border border-gray-300 rounded-lg px-3 py-2" placeholder="Minimum Ksh 2,500">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">M-PESA Phone Number</label>
+                            <input type="text" class="w-full border border-gray-300 rounded-lg px-3 py-2" placeholder="e.g. 254712345678">
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg mb-6">
+                            <p class="text-sm text-blue-800">Available balance: <span class="font-bold">Ksh 3,850</span></p>
+                            <p class="text-xs text-blue-700 mt-1">Withdrawals processed within 24 hours</p>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition">
+                            Request Withdrawal
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-gray-50 rounded-xl shadow-sm overflow-hidden max-w-4xl mx-auto">
+                <div class="p-6">
+                    <h3 class="font-semibold text-lg mb-4">Transaction History</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-600">15/06/2023</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-600">Deposit</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-green-600">+150</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-600">Completed</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-600">18/06/2023</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-600">Product Marketing</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-green-600">+50</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-600">Completed</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-600">20/06/2023</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-600">Referral Bonus</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-green-600">+100</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-600">Completed</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-600">22/06/2023</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-600">Withdrawal</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-red-600">-2,500</td>
+                                    <td class="px-4 py-3 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Need <span class="text-purple-600">Help?</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-envelope text-purple-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-700">Email</p>
+                                <p class="text-gray-600">silverearn@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fab fa-whatsapp text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-700">WhatsApp</p>
+                                <p class="text-gray-600">+254115264461</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-phone text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-700">Call</p>
+                                <p class="text-gray-600">+254115264461</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4">Frequently Asked Questions</h3>
+                        <div class="space-y-3">
+                            <div class="border-b border-gray-200 pb-3">
+                                <button class="flex justify-between items-center w-full text-left font-medium text-purple-600">
+                                    <span>How do I start earning?</span>
+                                    <i class="fas fa-chevron-down text-sm"></i>
+                                </button>
+                                <p class="mt-1 text-sm text-gray-600 hidden">Register, pay the one-time Ksh 150 fee, and start completing tasks like marketing products, taking surveys, and referring friends to earn money.</p>
+                            </div>
+                            <div class="border-b border-gray-200 pb-3">
+                                <button class="flex justify-between items-center w-full text-left font-medium text-purple-600">
+                                    <span>When can I withdraw my earnings?</span>
+                                    <i class="fas fa-chevron-down text-sm"></i>
+                                </button>
+                                <p class="mt-1 text-sm text-gray-600 hidden">You can withdraw when your balance reaches the minimum of Ksh 2,500. Withdrawals are processed within 24 hours.</p>
+                            </div>
+                            <div class="border-b border-gray-200 pb-3">
+                                <button class="flex justify-between items-center w-full text-left font-medium text-purple-600">
+                                    <span>How do referrals work?</span>
+                                    <i class="fas fa-chevron-down text-sm"></i>
+                                </button>
+                                <p class="mt-1 text-sm text-gray-600 hidden">You earn Ksh 100 for each friend who signs up using your referral link and Ksh 50 when they make their first deposit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Send Us a Message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                            <input type="text" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea rows="4" class="w-full border border-gray-300 rounded-lg px-3 py-2"></textarea>
+                        </div>
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div id="registerModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 overflow-hidden">
+            <div class="bg-purple-600 p-4 text-white">
+                <h3 class="text-xl font-semibold">Create Your Account</h3>
+            </div>
+            <div class="p-6">
+                <form id="registerForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" required class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email or Phone Number</label>
+                        <input type="text" required class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <input type="password" required class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
+                        <input type="password" required class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="terms" required class="mr-2">
+                        <label for="terms" class="text-sm text-gray-600">I agree to the <a href="#" class="text-purple-600">Terms & Conditions</a></label>
+                    </div>
+                    <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition">
+                        Register
+                    </button>
+                </form>
+                <div class="mt-4 text-center">
+                    <p class="text-sm text-gray-600">Already have an account? <button id="showLoginFromRegister" class="text-purple-600 font-medium">Login</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 overflow-hidden">
+            <div class="bg-blue-600 p-4 text-white">
+                <h3 class="text-xl font-semibold">Login to Your Account</h3>
+            </div>
+            <div class="p-6">
+                <form id="loginForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email or Phone Number</label>
+                        <input type="text" required class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <input type="password" required class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="remember" class="mr-2">
+                            <label for="remember" class="text-sm text-gray-600">Remember me</label>
+                        </div>
+                        <a href="#" class="text-sm text-blue-600">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition">
+                        Login
+                    </button>
+                </form>
+                <div class="mt-4 text-center">
+                    <p class="text-sm text-gray-600">Don't have an account? <button id="showRegisterFromLogin" class="text-blue-600 font-medium">Register</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OTP Verification Modal -->
+    <div id="otpModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 overflow-hidden">
+            <div class="bg-green-600 p-4 text-white">
+                <h3 class="text-xl font-semibold">Verify Your Account</h3>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-600 mb-4">We've sent a 6-digit verification code to your email/phone. Please enter it below:</p>
+                <div class="flex justify-center space-x-2 mb-6">
+                    <input type="text" maxlength="1" class="w-12 h-12 border border-gray-300 rounded-lg text-center text-xl font-bold">
+                    <input type="text" maxlength="1" class="w-12 h-12 border border-gray-300 rounded-lg text-center text-xl font-bold">
+                    <input type="text" maxlength="1" class="w-12 h-12 border border-gray-300 rounded-lg text-center text-xl font-bold">
+                    <input type="text" maxlength="1" class="w-12 h-12 border border-gray-300 rounded-lg text-center text-xl font-bold">
+                    <input type="text" maxlength="1" class="w-12 h-12 border border-gray-300 rounded-lg text-center text-xl font-bold">
+                    <input type="text" maxlength="1" class="w-12 h-12 border border-gray-300 rounded-lg text-center text-xl font-bold">
+                </div>
+                <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition">
+                    Verify & Continue
+                </button>
+                <div class="mt-4 text-center">
+                    <p class="text-sm text-gray-600">Didn't receive code? <button class="text-green-600 font-medium">Resend</button> (30s)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 overflow-hidden">
+            <div class="bg-yellow-500 p-4 text-white">
+                <h3 class="text-xl font-semibold">Complete Registration</h3>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-600 mb-4">To unlock all earning features, please pay the one-time registration fee of Ksh 150 via M-PESA.</p>
+                
+                <div class="bg-yellow-50 p-4 rounded-lg mb-6">
+                    <h4 class="font-medium text-yellow-800 mb-2">Payment Instructions:</h4>
+                    <ol class="list-decimal list-inside text-sm text-yellow-700 space-y-1">
+                        <li>Go to M-PESA on your phone</li>
+                        <li>Select "Lipa Na M-PESA"</li>
+                        <li>Enter Paybill: <span class="font-bold">247247</span></li>
+                        <li>Account: <span class="font-bold">SILVEREARN</span></li>
+                        <li>Amount: <span class="font-bold">150</span></li>
+                        <li>Enter your M-PESA PIN</li>
+                    </ol>
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">M-PESA Transaction Code</label>
+                    <input type="text" class="w-full border border-gray-300 rounded-lg px-3 py-2" placeholder="Enter transaction code">
+                </div>
+                
+                <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg font-medium transition mb-2">
+                    Confirm Payment
+                </button>
+                <button id="cancelPayment" class="w-full bg-white border border-gray-300 text-gray-700 py-2 rounded-lg font-medium hover:bg-gray-50 transition">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-coins text-yellow-400 text-2xl"></i>
+                        <span class="font-bold text-xl">Silver Earn</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Earn money daily through product marketing, referrals, surveys, and more.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#earn" class="text-gray-400 hover:text-white transition">How to Earn</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition">Products</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Earning Methods</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Product Marketing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Referral Program</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Daily Surveys</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Weekly Gifts</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sales Commission</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">silverearn@gmail.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">+254115264461</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">+254115264461</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2023 Silver Earn. All rights reserved.</p>
+                <div class="mt-2">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-white transition">Terms of Service</a> | 
+                    <a href="#" class="hover:text-white transition">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal toggles
+        const registerBtn = document.getElementById('registerBtn');
+        const loginBtn = document.getElementById('loginBtn');
+        const registerModal = document.getElementById('registerModal');
+        const loginModal = document.getElementById('loginModal');
+        const otpModal = document.getElementById('otpModal');
+        const paymentModal = document.getElementById('paymentModal');
+        const showLoginFromRegister = document.getElementById('showLoginFromRegister');
+        const showRegisterFromLogin = document.getElementById('showRegisterFromLogin');
+        const cancelPayment = document.getElementById('cancelPayment');
+        
+        registerBtn.addEventListener('click', () => {
+            registerModal.classList.remove('hidden');
+        });
+        
+        loginBtn.addEventListener('click', () => {
+            loginModal.classList.remove('hidden');
+        });
+        
+        showLoginFromRegister.addEventListener('click', () => {
+            registerModal.classList.add('hidden');
+            loginModal.classList.remove('hidden');
+        });
+        
+        showRegisterFromLogin.addEventListener('click', () => {
+            loginModal.classList.add('hidden');
+            registerModal.classList.remove('hidden');
+        });
+        
+        cancelPayment.addEventListener('click', () => {
+            paymentModal.classList.add('hidden');
+        });
+
+        // Close modals when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === registerModal) {
+                registerModal.classList.add('hidden');
+            }
+            if (e.target === loginModal) {
+                loginModal.classList.add('hidden');
+            }
+            if (e.target === otpModal) {
+                otpModal.classList.add('hidden');
+            }
+            if (e.target === paymentModal) {
+                paymentModal.classList.add('hidden');
+            }
+        });
+
+        // Form submissions
+        document.getElementById('registerForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            registerModal.classList.add('hidden');
+            otpModal.classList.remove('hidden');
+        });
+        
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            loginModal.classList.add('hidden');
+            // Here you would typically verify login and then show dashboard
+        });
+
+        // After OTP verification, show payment modal
+        const otpInputs = otpModal.querySelectorAll('input');
+        otpInputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                if (input.value.length === 1 && index < otpInputs.length - 1) {
+                    otpInputs[index + 1].focus();
+                }
+                
+                // Check if all OTP fields are filled
+                const allFilled = Array.from(otpInputs).every(input => input.value.length === 1);
+                if (allFilled) {
+                    setTimeout(() => {
+                        otpModal.classList.add('hidden');
+                        paymentModal.classList.remove('hidden');
+                    }, 500);
+                }
+            });
+            
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && input.value.length === 0 && index > 0) {
+                    otpInputs[index - 1].focus();
+                }
+            });
+        });
+
+        // Copy referral link
+        function copyReferralLink() {
+            const referralLink = document.getElementById('referralLink');
+            referralLink.select();
+            document.execCommand('copy');
+            
+            // Show tooltip or notification
+            alert('Referral link copied to clipboard!');
+        }
+
+        // Animated counters
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        function animateCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            });
+        }
+        
+        // Start animation when scrolled to counters
+        window.addEventListener('scroll', () => {
+            const countersSection = document.querySelector('.bg-purple-700');
+            const sectionTop = countersSection.offsetTop;
+            const sectionHeight = countersSection.offsetHeight;
+            const scrollPosition = window.scrollY;
+            
+            if (scrollPosition > sectionTop + sectionHeight - window.innerHeight) {
+                animateCounters();
+                // Remove event listener after animation starts
+                window.removeEventListener('scroll', this);
+            }
+        });
+
+        // FAQ accordion
+        const faqButtons = document.querySelectorAll('#contact button');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.classList.toggle('hidden');
+                
+                const icon = button.querySelector('i');
+                if (answer.classList.contains('hidden')) {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
